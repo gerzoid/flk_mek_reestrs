@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mek.Rules.Handlers._003K._00
+namespace mek.Rules.Handlers
 {
     public class flk_003K_00_0040 : HandlerFlk, IX
     {

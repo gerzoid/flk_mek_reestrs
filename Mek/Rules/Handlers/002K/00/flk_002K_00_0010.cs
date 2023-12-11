@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mek.Rules.Handlers._002K._00
+namespace mek.Rules.Handlers
 {
     public class flk_002K_00_0010 : HandlerFlk, IC, ID, IH, IR, IT, IX, IGlobalRule
     {
