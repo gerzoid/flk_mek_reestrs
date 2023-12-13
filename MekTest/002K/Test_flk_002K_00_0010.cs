@@ -1,10 +1,6 @@
-﻿using mek.Rules;
+﻿using mek.Flk;
+using mek.Rules;
 using mek.Rules.Handlers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace MekTest._002K
@@ -21,7 +17,7 @@ namespace MekTest._002K
             data.SetValue("2050-03-03");
 
             var flk = Activator.CreateInstance(fl);
-            ((HandlerFlk)flk).HandleAsync(treatmentCase);
+            ((HandlerFlk)flk).Handle(treatmentCase);
 
             Assert.NotEmpty(treatmentCase.Result);
             Assert.Equal(treatmentCase?.Result?[0].id_error, flk.GetType().Name);
@@ -33,7 +29,7 @@ namespace MekTest._002K
             var treatmentCase = Reestr.OpenXmlSample(TYPE_REESTR.X);
 
             var flk = Activator.CreateInstance(fl);
-            ((HandlerFlkAbstract)flk).HandleAsync(treatmentCase);
+            ((HandlerFlk)flk).Handle(treatmentCase);
 
             Assert.Empty(treatmentCase.Result);
 
